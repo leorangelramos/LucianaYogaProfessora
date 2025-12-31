@@ -29,33 +29,79 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  "name": "Luciana Gomes Professora de Yoga",
-  "image": "https://lucianayoga.site/aulayoga02.jpg",
-  "@id": "https://lucianayoga.site/#website",
-  "url": "https://lucianayoga.site/",
-  "telephone": "+5511976964443",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "São Paulo",
-    "addressRegion": "SP",
-    "addressCountry": "BR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "-23.55052",
-    "longitude": "-46.633309"
-  },
-  "description": "Aulas de Yoga online e presencial em São Paulo, Terapia Ayurveda e Florais de Bach.",
-  "sameAs": [
-    "https://www.youtube.com/@luyoga/featured",
-    "https://www.instagram.com/luespiritualidade/"
-  ],
-  "offers": {
-    "@type": "Offer",
-    "description": "Aulas de Yoga Online e Presencial"
-  }
+  "@graph": [
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://lucianayoga.site/#organization",
+      "name": "Luciana Gomes Yoga e Ayurveda",
+      "url": "https://lucianayoga.site/",
+      "logo": "https://lucianayoga.site/aulayoga02.jpg",
+      "image": "https://lucianayoga.site/banner1foto.png",
+      "telephone": "+5511976964443",
+      "priceRange": "$$",
+      "description": "Aulas de Yoga online e presenciais em São Paulo, Terapia Ayurveda e Florais de Bach focados no equilíbrio entre corpo e espírito.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-23.55052",
+        "longitude": "-46.633309"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "São Paulo",
+          "@id": "https://www.wikidata.org/wiki/Q174"
+        },
+        {
+          "@type": "Country",
+          "name": "Brasil"
+        }
+      ],
+      "sameAs": [
+        "https://www.youtube.com/@luyoga/featured",
+        "https://www.instagram.com/luespiritualidade/"
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Aulas de Yoga Online e Presencial",
+      "provider": { "@id": "https://lucianayoga.site/#organization" },
+      "serviceType": "Yoga Class",
+      "description": "Aulas semanais que unem a precisão do Iyengar Yoga com a filosofia do Yoga Clássico de Lonavla.",
+      "offers": {
+        "@type": "Offer",
+        "availability": "https://schema.org/InStock",
+        "description": "Aulas via Google Meet ou presenciais"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Terapia Ayurveda",
+      "provider": { "@id": "https://lucianayoga.site/#organization" },
+      "serviceType": "Ayurvedic Treatment",
+      "description": "Tratamento da causa raiz de desequilíbrios como ansiedade e insônia, com intercâmbio direto com médicos na Índia."
+    },
+    {
+      "@type": "Service",
+      "name": "Terapia Floral de Bach",
+      "provider": { "@id": "https://lucianayoga.site/#organization" },
+      "serviceType": "Alternative Medicine",
+      "description": "Harmonização de emoções e pensamentos através de essências energéticas naturais."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lucianayoga.site/#webpage",
+      "url": "https://lucianayoga.site/",
+      "name": "Luciana Yoga | Yoga, Ayurveda e Florais de Bach em São Paulo",
+      "isPartOf": { "@id": "https://lucianayoga.site/#organization" },
+      "description": "Encontre equilíbrio com aulas de Yoga, terapia Ayurveda e Florais de Bach com a professora Luciana Gomes."
+    }
+  ]
 }
 </script>
 
@@ -602,5 +648,3 @@
 
 
 </html>
-
-
